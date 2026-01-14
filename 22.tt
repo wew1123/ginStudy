@@ -1,0 +1,37 @@
+github.com/company/awesomeapp/
+├── cmd/
+│   ├── server/
+│   │   └── main.go                     # 主程序入口
+│   └── cli/
+│       └── cli.go                      # CLI工具入口
+├── api/
+│   └── v1/
+│       ├── handlers/
+│       │   └── user_handler.go         # API处理器
+│       └── routes.go                   # 路由定义
+├── pkg/
+│   ├── logger/
+│   │   └── logger.go                   # 公共日志包
+│   └── validator/
+│       └── validator.go                # 公共验证包
+├── internal/                           # 根级internal目录
+│   ├── config/
+│   │   └── config.go                   # 内部配置包
+│   ├── service/
+│   │   └── user_service.go             # 用户业务逻辑
+│   └── db/
+│       └── postgres.go                 # 数据库连接
+├── modules/                            # 功能模块目录
+│   ├── auth/
+│   │   ├── handler.go                  # 认证处理器
+│   │   └── internal/                   # auth模块的internal
+│   │       └── jwt/
+│   │           └── jwt.go              # JWT实现
+│   └── payment/
+│       ├── processor.go                # 支付处理器
+│       └── internal/                   # payment模块的internal
+│           └── gateway/
+│               └── gateway.go          # 支付网关
+└── tools/                              # 开发工具目录
+    └── migrator/
+        └── main.go                     # 数据库迁移工具
